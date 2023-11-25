@@ -1,0 +1,14 @@
+<div class="row p-5">
+  <div class="col-3 pt-2 mb-3" *ngFor="let meal of mealsList">
+    <div
+      style="cursor: pointer"
+      class="card shadow"
+      (click)="navigate(meal.idMeal)"
+    >
+      <img class="card-img-top img-height" [src]="meal.strMealThumb" />
+      <div class="card-body">
+        <h4 class="card-title text-center">{{ meal.strMeal }}</h4>
+      </div>
+    </div>
+  </div>
+</div>

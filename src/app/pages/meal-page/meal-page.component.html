@@ -1,0 +1,16 @@
+<div
+  class="container-fluid text-center justify-content-center align-items-center p-5"
+>
+  <div class="w-100 d-flex justify-content-center align-items-center">
+    <img class="meal-pg-img-height" [src]="mealDetails.strMealThumb" />
+  </div>
+
+  <h3 class="my-3">{{ mealDetails.strMeal }}</h3>
+  <a
+    (click)="navigate(mealDetails.strCategory)"
+    style="cursor: pointer"
+    class="my-3"
+    >{{ mealDetails.strCategory }}</a
+  >
+  <p class="my-3">{{ mealDetails.strInstructions }}</p>
+</div>

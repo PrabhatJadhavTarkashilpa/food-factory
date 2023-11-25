@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+<!-- APIs -->
+
+categories --> https://www.themealdb.com/api/json/v1/1/categories.php
+filter by category --> https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken (key - strCategory)
+single meal --> https://www.themealdb.com/api/json/v1/1/lookup.php?i=53016 (key - idMeal)
+search meal --> www.themealdb.com/api/json/v1/1/search.php?s={searchString}

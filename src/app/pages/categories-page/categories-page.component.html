@@ -1,0 +1,14 @@
+<div class="row p-5">
+  <div class="col-3 pt-2 mb-3" *ngFor="let category of categoriesList">
+    <div
+      style="cursor: pointer"
+      class="card bg-card shadow"
+      (click)="navigate(category.strCategory)"
+    >
+      <img class="card-img-top img-height" [src]="category.strCategoryThumb" />
+      <div class="card-body">
+        <h4 class="card-title text-center">{{ category.strCategory }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
