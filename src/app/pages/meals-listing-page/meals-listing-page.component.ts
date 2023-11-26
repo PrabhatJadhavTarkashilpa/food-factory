@@ -18,13 +18,22 @@ export class MealsListingPageComponent {
     private active: ActivatedRoute
   ) {
     this.active.params.subscribe((res: any) => {
-      this.loadAllMeals(res.categoryName);
+      if (res.categoryName) {
+        this.loadAllMealsByCategory(res.categoryName);
+      } else {
+        this.loadAllMealsBySearch(res.searchString);
+      }
     });
   }
 
-  loadAllMeals(category: string) {
+  loadAllMealsByCategory(category: string) {
     this.masterService.getFoodByCategory(category).subscribe((res: any) => {
-      console.log('res', res);
+      this.mealsList = res.meals;
+    });
+  }
+
+  loadAllMealsBySearch(searchStr: string) {
+    this.masterService.getMealBySearch(searchStr).subscribe((res: any) => {
       this.mealsList = res.meals;
     });
   }

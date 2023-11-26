@@ -5,6 +5,13 @@ import { MealPageComponent } from './pages/meal-page/meal-page.component';
 
 export const routes: Routes = [
   { path: '', component: CategoriesPageComponent },
-  { path: 'mealsList/:categoryName', component: MealsListingPageComponent },
+  {
+    path: 'mealsList/category/:categoryName',
+    component: MealsListingPageComponent,
+  },
+  {
+    path: 'mealsList/search/:searchString',
+    component: MealsListingPageComponent,
+  },
   { path: 'meal/:mealId', component: MealPageComponent },
 ];

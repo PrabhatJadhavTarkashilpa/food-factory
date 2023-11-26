@@ -26,6 +26,6 @@ export class CategoriesPageComponent implements OnInit {
   }
 
   navigate(categoryName: string) {
-    this.router.navigate(['/mealsList', categoryName]);
+    this.router.navigate(['/mealsList/category', categoryName]);
   }
 }

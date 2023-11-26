@@ -30,6 +30,6 @@ export class MealPageComponent {
   }
 
   navigate(categoryName: string) {
-    this.router.navigate(['/mealsList', categoryName]);
+    this.router.navigate(['/mealsList/category', categoryName]);
   }
 }
